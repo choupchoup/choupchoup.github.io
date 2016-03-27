@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app="choup" ng-controller="Main as ctrl">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ctrl.title}}</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+	<div class="main">
+		<header>
+			<h1><a href="/">ENJOY CHOUP CHOUP</a></h1>
+			<div>
+				<ul class="flex-justify">
+					<li><a href="/#/cuisine">Cuisine</a></li>
+					<li>Origamis</li>
+					<li>Diy</li>
+					<li>Livre</li>
+					<li><a href="/#/pause-gourmande">pause gourmande</a></li>
+					<li>Coups de coeur</li>
+				</ul>
+			</div>
+			<div class="flex-justify full-image">
+				<div class="macarons"><span>macarons</span></div>
+				<div class="origamis"><span>origamis</span></div>
+				<div class="livres"><span>livres</span></div>
+			</div>
+		</header>
+  	<main ng-view></main>
+  </div>
+  <script src="/vendors/angular.js"></script>
+  <script src="/vendors/angular-route.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
