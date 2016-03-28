@@ -7,6 +7,7 @@ body {
     padding: 0;
     margin: 20px;
     background: url(/images/vintagegris.jpg);
+    color: #222;
   
 }
 
@@ -21,10 +22,11 @@ body {
 }
 h1{
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 30px;
+	margin-bottom: 20px;
 }
 h1 a {
-	color: black;
+	color: #222;
 	text-decoration: none;
 }
 ul{
@@ -37,8 +39,11 @@ ul li{
 	background-color: rgba(255, 255, 255, 0.5);
 
 }
+header nav {
+	margin-bottom: 30px;
+}
 header ul li a {
-	color: black;
+	color: #222;
 	text-decoration: none;
 }
 header ul li:hover{
@@ -71,6 +76,7 @@ header ul li:hover a {
 .full-image div{
 	background-size: 100%;
 	text-align: center;
+	border: 7px solid rgba(202, 166, 166, 0.78);
 }
 .flex-justify div span{
 	opacity: 0;
