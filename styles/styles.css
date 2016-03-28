@@ -6,6 +6,7 @@ body {
     font-family: disney;
     padding: 0;
     margin: 20px;
+    background: url(/images/vintagegris.jpg);
   
 }
 
@@ -86,10 +87,13 @@ header ul li:hover a {
 }
 main{
 	font-family: arial;
-	background-color: #CEBD92;
+	background-color: rgba(202, 166, 166, 0.78);
 	margin-top: 40px;
 	padding: 10px;
+	border-top: 4px dotted pink;
 }
 .red{
 	color:red;
 }
+
+
