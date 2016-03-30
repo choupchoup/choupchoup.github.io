@@ -8,7 +8,6 @@ body {
     margin: 20px;
     background: url(/images/vintagegris.jpg);
     color: #222;
-  
 }
 
 /*.main correspond à une class qui s'appelle main*/
@@ -19,6 +18,9 @@ body {
 	overflow: auto;
 	box-shadow: 0 0 10px #333;
 	border-radius: 3px;
+}
+h1, h2, h3 {
+	font-family: disney;
 }
 h1{
 	text-align: center;
