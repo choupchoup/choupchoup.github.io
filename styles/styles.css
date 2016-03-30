@@ -36,12 +36,12 @@ ul{
 	list-style: none;
 	padding: 0;
 }
-ul li{
-	padding: 10px;
+header ul li a {
+	padding: 10px 10px 15px;
 	border-radius: 3px;
 	background-color: rgba(255, 255, 255, 0.5);
-
 }
+
 header nav {
 	margin-bottom: 30px;
 }
@@ -117,6 +117,13 @@ main{
 	padding: 10px;
 	border-top: 4px dotted rgba(255, 255, 255, 0.7);
 }
+
+main ul li {
+	padding: 10px 10px 15px;
+	border-radius: 3px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
 .red{
 	color:red;
 }
