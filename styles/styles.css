@@ -15,7 +15,7 @@ body {
 .main{
 	width: 1000px;
 	margin: 0 auto;
-	background-color: pink;
+	background-color: rgba(255, 255, 255, 0.8);
 	overflow: auto;
 	box-shadow: 0 0 10px #333;
 	border-radius: 3px;
@@ -50,7 +50,7 @@ header ul li:hover{
 	background-color: rgba(255, 255, 255, 0.9);
 }
 header ul li:hover a {
-	color: rgba(255, 0, 127, 0.84);
+	color: rgba(28, 115, 75, 1);
 }
 .macarons{
 	background-image: url(/images/macarons.jpg);
@@ -76,7 +76,7 @@ header ul li:hover a {
 .full-image div{
 	background-size: 100%;
 	text-align: center;
-	border: 7px solid rgba(202, 166, 166, 0.78);
+	border: 7px solid rgba(28, 115, 75, 0.3);
 }
 .flex-justify div span{
 	opacity: 0;
@@ -93,13 +93,21 @@ header ul li:hover a {
 }
 main{
 	font-family: arial;
-	background-color: rgba(202, 166, 166, 0.78);
+	background-color: rgba(28, 115, 75, 0.27);
 	margin-top: 40px;
 	padding: 10px;
-	border-top: 4px dotted pink;
+	border-top: 4px dotted rgba(255, 255, 255, 0.7);
 }
 .red{
 	color:red;
 }
-
+.actualites{
+	display: flex;
+	background-size: 100%;
+}
+.actualites img {
+	width: 500px;
+	display: flex;
+	background-size: 100%;
+}
 
