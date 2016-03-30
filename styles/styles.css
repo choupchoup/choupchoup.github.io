@@ -24,6 +24,7 @@ h1{
 	text-align: center;
 	margin-top: 30px;
 	margin-bottom: 20px;
+    line-height: 1.5em;
 }
 h1 a {
 	color: #222;
@@ -68,28 +69,44 @@ header ul li:hover a {
 .flex-justify div{
 	width: 300px;
 	height: 200px;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
 
+}
+.full-image {
+	width: 930px;
+	margin: 0 auto;
 }
 .full-image div{
 	background-size: 100%;
 	text-align: center;
-	border: 7px solid rgba(28, 115, 75, 0.3);
+	margin: 0 5px;
 }
-.flex-justify div span{
+.full-image div > div {
+	height: 200px;
+}
+.full-image div.slick-slide {
+	border: 5px rgba(28, 115, 75, 0.3) solid;
+	display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content:space-around;
+}
+.full-image div span{
 	opacity: 0;
-	transition: .25s all linear;
+	transition: .20s linear;
+	transition-property: transform, opacity;
 	font-size: 2em;
+	width: 90%;
+	transform: translate(0, 50px);
 }
-.flex-justify div:hover span{
+.full-image div.slick-slide:hover span{
 	opacity: 1;
 	padding: 70px 0;
 	border-radius: 3px;
 	background-color: rgba(255, 255, 255, 0.7);
-	width: 90%;
-	text-align: center;
+	transform: translate(0, 0);
 }
 main{
 	font-family: arial;
@@ -109,5 +126,42 @@ main{
 	width: 500px;
 	display: flex;
 	background-size: 100%;
+}
+ch-carousel {
+	display: block;
+	position: relative;
+	height: 200px;
+}
+ch-carousel span {
+    position: absolute;
+    font-size: 7em;
+    top: 30px;
+    z-index: 10;
+}
+ch-carousel span:last-child {
+    right: 0em;
+}
+ch-carousel .frame {
+    position: relative;
+    margin: 0 40px;
+    background: blue;
+    overflow: hidden;
+    height: 170px;
+}
+ch-carousel .slider {
+	position: absolute;
+    display: flex;
+    justify-content: space-between;
+
+    width: 1571px;
+}
+ch-carousel .slider div {
+    position: relative;
+    height: 150px;
+    background: red;
+    width: 250px;
+    padding: 10px;
+    outline: 1px black solid;
+    transition: 1s all linear;
 }
 

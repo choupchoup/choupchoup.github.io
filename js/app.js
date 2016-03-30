@@ -1,7 +1,10 @@
 (function () {
   'use strict';
 
-  angular.module('choup', ['ngRoute'])
+  angular.module('choup', [
+      'ngRoute',
+      'slick'
+    ])
     .config(['$routeProvider', function ($routeProvider) {
 
       var categories = ['cuisine', 'diy', 'origamis', 'livres', 'coup-coeur', 'pause-gourmande'];
@@ -15,7 +18,7 @@
           },
           resolve: {
             pageTitle: function () {
-              return category.charAt(0).toUpperCase() + category.slice(1);;
+              return category.charAt(0).toUpperCase() + category.slice(1);
             }
           },
           controller: 'PageTitle'
@@ -42,16 +45,16 @@
           controller: 'PageTitle',
           resolve: {
             pageTitle: ['DEFAULT_TITLE', function (DEFAULT_TITLE) {
-                return DEFAULT_TITLE;
+              return DEFAULT_TITLE;
             }]
-          },
+          }
         })
         .otherwise({
           redirectTo: '/index'
         });
     }])
     .constant('DEFAULT_TITLE', 'Enjoy Choup Choup')
-    .controller('PageTitle', ['pageTitle' ,'PageState', function (pageTitle, PageState) {
+    .controller('PageTitle', ['pageTitle', 'PageState', function (pageTitle, PageState) {
       PageState.setPageTitle(pageTitle);
     }])
     .controller('Main', ['$scope', 'PageState', function ($scope, PageState) {
@@ -65,21 +68,21 @@
       });
     }])
     .factory('PageState', ['DEFAULT_TITLE', function (DEFAULT_TITLE) {
-    
-          var pageTitle = DEFAULT_TITLE;
-    
-          return {
-            setPageTitle: setPageTitle,
-            getPageTitle: getPageTitle
-          };
-    
-          function getPageTitle () {
-            return pageTitle;
-          }
-    
-          function setPageTitle (title) {
-            pageTitle = title;
-          }
-        }]);
+
+      var pageTitle = DEFAULT_TITLE;
+
+      return {
+        setPageTitle: setPageTitle,
+        getPageTitle: getPageTitle
+      };
+
+      function getPageTitle () {
+        return pageTitle;
+      }
+
+      function setPageTitle (title) {
+        pageTitle = title;
+      }
+    }]);
 
 })();
