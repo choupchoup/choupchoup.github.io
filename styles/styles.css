@@ -64,6 +64,9 @@ header ul li:hover a {
 .livres{
 	background-image: url(/images/book1.jpg);
 }
+.salade-feves{
+	background-image: url(/images/salade-feves.jpg);
+}
 .flex-justify{
 	display:flex;
 	justify-content: space-around;
@@ -173,4 +176,59 @@ ch-carousel .slider div {
     outline: 1px black solid;
     transition: 1s all linear;
 }
+.feves {
+	background: url(/images/salade-feves.jpg);
+	width: 400px;
+	height: 600px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.feves span {
+	padding: 2em;
+	background: rgba(255, 255, 255, 0.5);
+}
 
+.cuisine {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-size: 100%;
+}
+
+.cuisine .sucre, 
+.cuisine .sale {
+	width: 400px;
+	height: 200px;
+	background-size: 100%;
+	justify-content: space-around;
+	display: flex;
+	align-items: center;
+	font-family: disney;
+	color: black;
+	text-decoration: none;
+	font-size: 2em;
+}
+.cuisine .sucre {
+	background-image: url(/images/sucre.jpg);
+}
+.cuisine .sale {
+	background-image: url(/images/sel.jpg);
+}
+.cuisine a span {
+
+}
+
+.bouton-retour {
+	display: inline-block;
+	padding: 5px 10px;
+	background: rgba(149, 167, 171, 0.84);
+	color: black;
+	text-decoration: none;
+	border-radius: 2px;
+	transition: background .25s linear;
+}
+
+.bouton-retour:hover {
+	background: rgba(29, 96, 111, 0.84);
+}
