@@ -7,48 +7,62 @@
     ])
     .config(['$routeProvider', function ($routeProvider) {
 
-      var categories = ['cuisine', 'diy', 'origamis', 'livres', 'coup-coeur', 'pause-gourmande'];
-
-      categories.forEach(function (category) {
-
-        // home pages for categories
-        $routeProvider.when('/' + category, {
-          templateUrl: function () {
-            return '../pages/' + category + '/index.html';
-          },
-          resolve: {
-            pageTitle: function () {
-              return category.charAt(0).toUpperCase() + category.slice(1);
-            }
-          },
-          controller: 'PageTitle'
-        });
-
-        // specific pages for categories
-        $routeProvider.when('/' + category + '/:name', {
-          templateUrl: function (urlAttribute) {
-            return '../pages/' + category + '/' + urlAttribute.name + '.html';
-          },
-          resolve: {
-            pageTitle: function () {
-              return category.charAt(0).toUpperCase() + category.slice(1);
-            }
-          },
-          controller: 'PageTitle'
-        });
-
-      });
 
       $routeProvider
         .when('/index', {
-          templateUrl: '../pages/accueil.html',
+          templateUrl: '/pages/accueil.html',
           controller: 'PageTitle',
           resolve: {
             pageTitle: ['DEFAULT_TITLE', function (DEFAULT_TITLE) {
               return DEFAULT_TITLE;
             }]
           }
-        })
+        });
+      
+
+      // home pages for categories
+      $routeProvider.when('/:category', {
+        templateUrl: function (urlAttribute) {
+          return '../pages/' + urlAttribute.category + '/index.html';
+        },
+        resolve: {
+          pageTitle: function ($route) {
+            var params = $route.current.params;
+            return params.category.charAt(0).toUpperCase() + params.category.slice(1);
+          }
+        },
+        controller: 'PageTitle'
+      });
+
+      // specific pages for categories
+      $routeProvider.when('/:category/:name', {
+        templateUrl: function (urlAttribute) {
+          return '../pages/' + urlAttribute.category + '/' + urlAttribute.name + '.html';
+        },
+        resolve: {
+          pageTitle: function ($route) {
+            var params = $route.current.params;
+            return params.category.charAt(0).toUpperCase() + params.category.slice(1);
+          }
+        },
+        controller: 'PageTitle'
+      });
+
+      // specific pages for categories and sub categories
+      $routeProvider.when('/:category/:sub/:name', {
+        templateUrl: function (urlAttribute) {
+          return '../pages/' + urlAttribute.category +'/' + urlAttribute.sub + '/' + urlAttribute.name + '.html';
+        },
+        resolve: {
+          pageTitle: function ($route) {
+            var params = $route.current.params;
+            return params.category.charAt(0).toUpperCase() + params.category.slice(1);
+          }
+        },
+        controller: 'PageTitle'
+      });
+
+      $routeProvider
         .otherwise({
           redirectTo: '/index'
         });

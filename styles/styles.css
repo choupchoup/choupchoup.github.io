@@ -19,6 +19,9 @@ body {
 	box-shadow: 0 0 10px #333;
 	border-radius: 3px;
 }
+a {
+	text-decoration: none;
+}
 h1, h2, h3 {
 	font-family: disney;
 }
@@ -194,6 +197,7 @@ ch-carousel .slider div {
 	justify-content: space-around;
 	align-items: center;
 	background-size: 100%;
+	margin-bottom: 30px;
 }
 
 .cuisine .sucre, 
@@ -215,20 +219,56 @@ ch-carousel .slider div {
 .cuisine .sale {
 	background-image: url(/images/sel.jpg);
 }
-.cuisine a span {
-
-}
-
 .bouton-retour {
 	display: inline-block;
 	padding: 5px 10px;
 	background: rgba(149, 167, 171, 0.84);
 	color: black;
-	text-decoration: none;
+	
 	border-radius: 2px;
 	transition: background .25s linear;
 }
-
 .bouton-retour:hover {
 	background: rgba(29, 96, 111, 0.84);
+}
+.liste-recette {
+	justify-content: space-around;
+	display: flex;
+	font-family: disney;
+	color: black;
+	text-decoration: none;
+	flex-wrap: wrap;
+}
+.liste-recette a {
+	width: 300px;
+	margin-bottom: 30px;
+	background: white;
+	padding: 10px;
+	color: rgba(29, 96, 111, 0.84);
+}
+.liste-recette img {
+	width: 100%;
+}
+.liste-recette a img {
+	transition: .25s linear all;
+	-webkit-filter: saturate(70%);
+	filter: saturate(70%);
+	clip: rect(0, 250px, 150px 0);
+	position: absolute;
+}
+.liste-recette a:hover img {
+	transform: scale(1.25);
+	-webkit-filter: saturate(100%);
+	filter: saturate(100%);
+}
+.liste-recette a span {
+	overflow: hidden;
+    position: relative;
+    display: block;
+    height: 220px;
+}
+.liste-recette a span+span {
+	padding-top: 10px;
+	display: inline-block;
+	height: auto;
 }
